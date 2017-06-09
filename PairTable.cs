@@ -32,6 +32,7 @@ namespace Web.Classes.Data
         {
             if (_pairs != null)
             {
+            
                 foreach (PairRequest item in _pairs)
                 {
 
@@ -52,6 +53,7 @@ namespace Web.Classes.Data
         {
             return GetEnumerator();
         }
+        
     }
     
     // For convenience rest of classes will be set below
