@@ -56,7 +56,16 @@ namespace Web.Classes.Data
     
     // For convenience rest of classes will be set below
     
+      public class PairRequest
+    {
+        public int One { get; set; }
+        public int Two { get; set; }
+    }
     
+        public class PairRequests
+    {
+        public List<PairRequest> Pairs {get; set;}
+    }
     
     
 }
