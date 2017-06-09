@@ -1,0 +1,34 @@
+
+
+namespace Sabio.Web.Controllers.CMSPages
+{
+
+    [RoutePrefix("....")]
+    public class CMSPagesApiController : ApiController
+    {
+
+        public ICMSPagesService _cmsPageService = null;
+        public IUserService _userService = null;
+
+        public CMSPagesApiController(ICMSPagesService cmsPageInject, IUserService userServiceInject)
+        {
+            _cmsPageService = cmsPageInject;
+            _userService = userServiceInject;
+        }
+       
+        
+        //  UPDATE ARRAY OF PAIR ID AND COLUMN2
+        [Route("column2"), HttpPut]
+        public HttpResponseMessage MultiUpdatePageOrder(PairRequests pairs)
+        {
+
+            SuccessResponse response = new SuccessResponse();
+
+            _cmsPageService.PairTables(pairs);
+
+            return Request.CreateResponse(HttpStatusCode.OK, response);
+        }
+       
+    }
+
+}
