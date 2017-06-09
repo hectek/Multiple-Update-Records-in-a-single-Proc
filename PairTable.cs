@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Sabio.Web.Domain;
 using System.Data;
 using System.Data.SqlClient;
 using Sabio.Data;
-using Sabio.Web.Models.Requests;
 using Microsoft.SqlServer.Server;
 
-namespace Sabio.Web.Classes.Data
+namespace Web.Classes.Data
 {
     public class PairTable : IEnumerable<SqlDataRecord>
     {
@@ -54,9 +52,11 @@ namespace Sabio.Web.Classes.Data
         {
             return GetEnumerator();
         }
-
-
-        
-
     }
+    
+    // For convenience rest of classes will be set below
+    
+    
+    
+    
 }
